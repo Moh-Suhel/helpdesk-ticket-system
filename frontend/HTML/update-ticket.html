@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update Ticket - HelpDesk</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h2>HelpDesk</h2>
+
+        <nav>
+            <a href="dashboard.html">My Tickets</a>
+            <a href="create-ticket.html">Create Ticket</a>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="update-ticket">
+
+            <h1>Update Ticket</h1>
+
+            <p>Edit your ticket details below.</p>
+
+
+            <form id="updateTicketForm">
+
+                <label for="title">Title</label>
+
+                <input
+                    type="text"
+                    id="updateTitle"
+                    name="title"
+                    placeholder="Enter ticket title"
+                >
+
+
+                <label for="description">Description</label>
+
+                <textarea
+                    id="updateDescription"
+                    name="description"
+                    placeholder="Describe your problem"
+                ></textarea>
+
+
+                <label for="category">Category</label>
+
+                <select id="updateCategory" name="category">
+
+                    <option value="">Select category</option>
+
+                    <option value="hardware">Hardware</option>
+
+                    <option value="software">Software</option>
+
+                    <option value="network">Network</option>
+
+                    <option value="account">Account</option>
+
+                    <option value="other">Other</option>
+
+                </select>
+
+
+                <label for="priority">Priority</label>
+
+                <select id="updatePriority" name="priority">
+
+                    <option value="">Select priority</option>
+
+                    <option value="low">Low</option>
+
+                    <option value="medium">Medium</option>
+
+                    <option value="high">High</option>
+
+                </select>
+
+
+                <button type="submit">
+                    Update Ticket
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="../JS/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - HelpDesk</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>HelpDesk Admin</h2>
+
+        <nav>
+            <a href="dashboard.html">My Tickets</a>
+            <a href="create-ticket.html">Create Ticket</a>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="admin-dashboard">
+
+            <div class="admin-dashboard-header">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Manage and view all support tickets.</p>
+                </div>
+            </div>
+
+            <!-- Admin Statistics -->
+
+            <section class="admin-stats">
+
+                <div class="stat-card">
+                    <h3>Total Tickets</h3>
+                    <p id="totalTickets">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Open</h3>
+                    <p id="openTickets">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>In Progress</h3>
+                    <p id="inProgressTickets">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Resolved</h3>
+                    <p id="resolvedTickets">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Closed</h3>
+                    <p id="closedTickets">0</p>
+                </div>
+
+            </section>
+
+            <!-- All Tickets -->
+
+            <section class="admin-tickets">
+
+                <h2>All Tickets</h2>
+    
+    <!-- Search & Filters -->
+
+<section class="admin-filters">
+
+    <h2>Search & Filters</h2>
+
+    <div class="filter-row">
+
+        <input
+            type="text"
+            id="adminSearch"
+            placeholder="Search tickets..."
+        >
+
+        <select id="adminStatusFilter">
+            <option value="">All Status</option>
+            <option value="open">Open</option>
+            <option value="in progress">In Progress</option>
+            <option value="resolved">Resolved</option>
+            <option value="closed">Closed</option>
+        </select>
+
+        <select id="adminPriorityFilter">
+            <option value="">All Priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <select id="adminCategoryFilter">
+            <option value="">All Category</option>
+            <option value="hardware">Hardware</option>
+            <option value="software">Software</option>
+            <option value="network">Network</option>
+            <option value="account">Account</option>
+            <option value="other">Other</option>
+        </select>
+
+        <button id="applyFiltersBtn">
+            Apply Filters
+        </button>
+
+        <button id="clearFiltersBtn">
+            Clear
+        </button>
+
+    </div>
+
+</section>
+                <div id="adminTicketsContainer">
+                    <p>Loading tickets...</p>
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="../JS/app.js"></script>
+
+</body>
+
+</html>

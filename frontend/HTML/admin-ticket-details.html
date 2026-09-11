@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Ticket Details - HelpDesk</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>HelpDesk Admin</h2>
+
+        <nav>
+            <a href="admin-dashboard.html">Admin Dashboard</a>
+            <a href="dashboard.html">My Tickets</a>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="ticket-details">
+
+            <h1>Ticket Details</h1>
+
+            <div id="adminTicketDetails">
+                <p>Loading ticket...</p>
+            </div>
+
+            <!-- Status Change -->
+
+            <div class="admin-action-box">
+
+                <h2>Change Ticket Status</h2>
+
+                <form id="adminStatusForm">
+
+                    <label for="adminStatus">
+                        Status
+                    </label>
+
+                    <select id="adminStatus" required>
+                        <option value="open">Open</option>
+                        <option value="in progress">In Progress</option>
+                        <option value="resolved">Resolved</option>
+                        <option value="closed">Closed</option>
+                    </select>
+
+                    <button type="submit">
+                        Update Status
+                    </button>
+
+                </form>
+
+            </div>
+            <div class="admin-action-box">
+
+    <h2>Change Ticket Priority</h2>
+
+    <form id="adminPriorityForm">
+        <label for="adminPriority">Priority</label>
+
+        <select id="adminPriority" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <button type="submit">Update Priority</button>
+    </form>
+</div>
+
+
+<!-- Ticket Assignment -->
+
+<div class="admin-action-box">
+
+    <h2>Assign Ticket</h2>
+
+    <form id="adminAssignmentForm">
+
+        <label for="adminAssignment">
+            Assign To
+        </label>
+
+        <select id="adminAssignment" required>
+            <option value="">Loading users...</option>
+        </select>
+
+        <button type="submit">
+            Assign Ticket
+        </button>
+
+    </form>
+
+</div>
+
+        </section>
+
+    </main>
+
+    <script src="../JS/app.js"></script>
+
+</body>
+
+</html>
