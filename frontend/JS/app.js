@@ -10,7 +10,7 @@ if (form){
     const fullName = form.querySelector('[name="fullName"]').value
     const password = form.querySelector('[name="password"]').value
 
-    const response = await fetch("http://127.0.0.1:8000/api/v1/users/register", {
+    const response = await fetch("https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -44,7 +44,7 @@ if (loginForm) {
         const email = loginForm.querySelector('[name="email"]').value;
         const password = loginForm.querySelector('[name="password"]').value;
 
-        const response = await fetch("http://127.0.0.1:8000/api/v1/users/login", {
+        const response = await fetch("https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -668,7 +668,7 @@ if (logoutBtn) {
     logoutBtn.addEventListener("click", async () => {
 
         const response = await fetch(
-            "http://127.0.0.1:8000/api/v1/users/logout",
+            "https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/logout",
             {
                 method: "POST",
                 credentials: "include"
