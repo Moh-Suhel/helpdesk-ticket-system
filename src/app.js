@@ -6,7 +6,7 @@ import { router } from "./routes/user.routes.js"
 const app = express()
 
 app.use(cors({
-    origin: "https://roaring-choux-fac925.netlify.app/",
+    origin: "https://roaring-choux-fac925.netlify.app",
     credentials: true
 }))
 
